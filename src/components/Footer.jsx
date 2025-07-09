@@ -1,37 +1,54 @@
 import React from "react";
 import { MdEmail } from "react-icons/md";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa6";
 
 const Footer = () => {
   return (
     <div
       id="contact"
-      className="flex justify-around bg-[#465697] text-white p-10 md:p-12 items-center"
+      className="flex flex-col md:flex-row justify-between items-center gap-8 bg-[#465697] text-white p-8 md:p-12 text-center md:text-left"
     >
+      {/* Heading Section */}
       <div>
-        <h1 className="text-2xl md:text-6xl font-bold">Contact</h1>
-        <h3 className="text-sm md:text-2xl font-normal">
-          Feel Free To reach out!
+        <h1 className="text-3xl md:text-5xl font-bold">Contact</h1>
+        <h3 className="text-sm md:text-xl font-normal mt-2">
+          Feel Free To Reach Out!
         </h3>
       </div>
-      <ul className="text-sm md:text-xl flex flex-col gap-2">
-        <li className="flex gap-2 items-center hover:text-black">
+
+      {/* Contact List */}
+      <ul className="text-sm md:text-lg flex flex-col gap-3">
+        <li className="flex items-center gap-2 hover:text-black break-all">
           <MdEmail />
-          mauryariya234@gmail.com
+          <a href="mailto:mauryariya234@gmail.com">mauryariya234@gmail.com</a>
         </li>
-        <li className="flex gap-2 items-center hover:text-black">
+
+        <li className="flex items-center gap-2 hover:text-black break-all">
           <FaLinkedin />
-          www.linkedin.com/in/riya-maurya-195914294
+          <a
+            href="https://www.linkedin.com/in/riya-maurya-195914294"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            linkedin.com/in/riya-maurya-195914294
+          </a>
         </li>
-        <li className="flex gap-2 items-center hover:text-black">
+
+        <li className="flex items-center gap-2 hover:text-black break-all">
           <FaGithub />
-          https://github.com/Riyamaurya123
+          <a
+            href="https://github.com/Riyamaurya123"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            github.com/Riyamaurya123
+          </a>
         </li>
-        <li className="flex gap-2 items-center hover:text-black">
+
+        <li className="flex items-center gap-2 hover:text-black">
           <FaPhoneVolume />
-          9260941556
+          <a href="tel:9260941556">9260941556</a>
         </li>
       </ul>
     </div>

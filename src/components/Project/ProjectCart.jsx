@@ -3,25 +3,44 @@ import React from "react";
 const ProjectCart = ({ title, main, link }) => {
   return (
     <div
-      className="relative bg-zinc-900 p-5 md:p-7 flex flex-col w-80  shadow-lg rounded-2xl 
-                    transition-all duration-300 hover:scale-105 hover:shadow-xl border border-transparent 
-                    hover:border-[#465697] hover:shadow-[#465697]/50"
+      className="relative bg-zinc-900 p-6 flex flex-col w-full sm:w-80 md:w-96 rounded-2xl 
+                 transition-all duration-300 hover:scale-[1.03] border border-transparent 
+                 hover:border-[#465697] hover:shadow-lg hover:shadow-[#465697]/40"
     >
-      <img src="/images/img3.jpg" className="p-4" alt="" />
-      <h3 className="px-4 text-xl md:text-2xl font-bold leading-normal">
+      {/* Project Image */}
+      <div className="w-full h-52 md:h-40 overflow-hidden rounded-xl">
+        <img
+          src="/images/img3.jpg"
+          className="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-300"
+          alt="project"
+        />
+      </div>
+
+      {/* Title */}
+      <h3 className="text-xl md:text-2xl font-semibold mt-4 px-1 text-white">
         {title}
       </h3>
-      <p className="px-4 text-sm md:text-md leading-tight py-2">{main}</p>
-      <div className="mt-2 p-2 flex gap-2 md:gap-4">
-        <button className="md:mt-10 text-white py-2 px-3 text-sm md:text-lg ,d:py-2 md-px-4 hover:opacity-25 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697]">
+
+      {/* Description */}
+      <p className="text-sm md:text-base mt-2 px-1 text-gray-300">{main}</p>
+
+      {/* Buttons */}
+      <div className="mt-6 px-1 flex flex-col sm:flex-row sm:justify-start gap-3">
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white py-2 px-5 text-sm font-medium rounded-full bg-[#465697] hover:bg-[#3a4e86] transition"
+        >
           Demo
-        </button>
+        </a>
         <a
           href={link}
-          target="blank"
-          className="md:mt-10 text-white py-2 px-3 text-sm md:text-lg ,d:py-2 md-px-4 hover:opacity-25 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697]"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white py-2 px-5 text-sm font-medium rounded-full bg-[#465697] hover:bg-[#3a4e86] transition"
         >
-          source Code
+          Source Code
         </a>
       </div>
     </div>

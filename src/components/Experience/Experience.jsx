@@ -12,57 +12,57 @@ import {
 
 const skills = [
   {
-    icon: <IoLogoHtml5 color="#E34F26" size={80} />,
+    icon: <IoLogoHtml5 color="#E34F26" size={60} />,
     label: "HTML5",
     desc: "Semantic HTML, SEO, and accessibility best practices.",
   },
   {
-    icon: <IoLogoCss3 color="#1572b6" size={80} />,
+    icon: <IoLogoCss3 color="#1572b6" size={60} />,
     label: "CSS3",
     desc: "Responsive layouts, Flexbox, Grid, and animations.",
   },
   {
-    icon: <IoLogoJavascript color="#F7DF1E" size={80} />,
+    icon: <IoLogoJavascript color="#F7DF1E" size={60} />,
     label: "JavaScript",
     desc: "ES6+, async programming, and clean DOM scripting.",
   },
   {
-    icon: <FaReact color="#61DAFB" size={80} />,
+    icon: <FaReact color="#61DAFB" size={60} />,
     label: "React.js",
     desc: "Hooks, component-driven UIs, performance optimization.",
   },
   {
-    icon: <SiNextdotjs color="white" size={80} />,
+    icon: <SiNextdotjs color="white" size={60} />,
     label: "Next.js",
     desc: "Routing, SSR/SSG, and full-stack app development.",
   },
   {
-    icon: <SiMantine color="#339AF0" size={80} />,
+    icon: <SiMantine color="#339AF0" size={60} />,
     label: "Mantine",
     desc: "Modern React UI library for forms, modals & themes.",
   },
   {
-    icon: <SiShadcnui color="white" size={80} />,
+    icon: <SiShadcnui color="white" size={60} />,
     label: "Shadcn UI",
     desc: "Beautiful and accessible UI components built on Radix.",
   },
   {
-    icon: <SiTailwindcss color="#38B2AC" size={80} />,
+    icon: <SiTailwindcss color="#38B2AC" size={60} />,
     label: "Tailwind CSS",
     desc: "Rapid utility-first styling with mobile-first design.",
   },
   {
-    icon: <SiMongodb color="#47A248" size={80} />,
+    icon: <SiMongodb color="#47A248" size={60} />,
     label: "MongoDB",
     desc: "NoSQL database design, queries, and Mongoose.",
   },
   {
-    icon: <FaNodeJs color="#68A063" size={80} />,
+    icon: <FaNodeJs color="#68A063" size={60} />,
     label: "Node.js",
     desc: "Server-side logic, APIs, and event-driven architecture.",
   },
   {
-    icon: <SiExpress color="white" size={80} />,
+    icon: <SiExpress color="white" size={60} />,
     label: "Express.js",
     desc: "Routing, middleware, and RESTful APIs.",
   },
@@ -74,7 +74,7 @@ const internships = [
     role: "Frontend Developer Intern",
     duration: "May 2025 - June 2025",
     description: [
-      "Developed and optimized web pages using React, Nextjs & Tailwind, shandcn ui, mantine.",
+      "Developed and optimized web pages using React, Next.js, Tailwind, Shadcn UI, and Mantine.",
       "Collaborated with designers for pixel-perfect UIs.",
       "Improved load performance by 30% via lazy loading & cleanup.",
     ],
@@ -93,11 +93,15 @@ const internships = [
 
 const Experience = () => {
   return (
-    <div id="Experience" className="p-8 md:p-24 text-white bg-[#0d0d0d]">
-      <h1 className="text-3xl md:text-5xl font-bold text-center mb-6">
+    <div
+      id="Experience"
+      className="p-6 sm:p-10 md:p-16 lg:p-24 text-white bg-[#0d0d0d]"
+    >
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6">
         Experience
       </h1>
-      <p className="text-center text-gray-400 max-w-2xl mx-auto text-lg">
+
+      <p className="text-center text-gray-400 max-w-2xl mx-auto text-sm sm:text-base md:text-lg">
         I specialize in{" "}
         <span className="text-blue-400 font-medium">Frontend</span> and{" "}
         <span className="text-blue-400 font-medium">
@@ -108,24 +112,29 @@ const Experience = () => {
       </p>
 
       {/* Skills Grid */}
-      <div className="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
+      <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-10 justify-items-center">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="p-5 bg-zinc-900 rounded-xl shadow-lg hover:shadow-blue-500/20 transition-all duration-300 text-center"
+            className="p-4 bg-zinc-900 rounded-xl shadow-lg hover:shadow-blue-500/20 transition-all duration-300 text-center w-full max-w-[160px]"
           >
-            {skill.icon}
-            <h3 className="mt-3 text-lg font-semibold">{skill.label}</h3>
-            <p className="text-gray-400 text-sm mt-2">{skill.desc}</p>
+            <div className="flex justify-center">{skill.icon}</div>
+            <h3 className="mt-3 text-sm md:text-base font-semibold">
+              {skill.label}
+            </h3>
+            <p className="text-gray-400 text-xs md:text-sm mt-2">
+              {skill.desc}
+            </p>
           </div>
         ))}
       </div>
 
       {/* Internship Section */}
       <div className="mt-20">
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10">
           Internships
         </h2>
+
         <div className="space-y-6">
           {internships.map((intern, idx) => (
             <div
@@ -133,10 +142,12 @@ const Experience = () => {
               className="p-6 bg-zinc-900 rounded-xl shadow-md hover:shadow-blue-400/10 transition-shadow duration-300"
             >
               <div className="flex gap-4 items-start">
-                <FaBriefcase size={36} className="text-blue-500 mt-1" />
+                <FaBriefcase size={30} className="text-blue-500 mt-1" />
                 <div>
-                  <h3 className="text-xl font-semibold">{intern.role}</h3>
-                  <p className="text-gray-400">
+                  <h3 className="text-lg md:text-xl font-semibold">
+                    {intern.role}
+                  </h3>
+                  <p className="text-gray-400 text-sm md:text-base">
                     {intern.company} • {intern.duration}
                   </p>
                   <ul className="list-disc pl-5 mt-2 text-gray-300 text-sm space-y-1">
@@ -153,7 +164,7 @@ const Experience = () => {
 
       {/* CTA */}
       <div className="mt-16 text-center">
-        <p className="text-lg text-gray-300">
+        <p className="text-base md:text-lg text-gray-300">
           Looking for a passionate developer to join your team?
         </p>
         <a

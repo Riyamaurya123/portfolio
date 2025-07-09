@@ -86,14 +86,14 @@ const projects = [
 
 const Project = () => {
   return (
-    <div id="Project" className="relative p-10 md:p-24 text-white">
-      {/* 🔵 Background gradient animation behind cards */}
-      <div className="absolute z-0 top-40 left-[60%] w-[500px] h-[500px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full blur-[160px] opacity-30 animate-pulse"></div>
+    <div id="Project" className="relative p-6 sm:p-10 md:p-24 text-white">
+      {/* Background Gradient */}
+      <div className="absolute z-0 top-40 left-[60%] w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full blur-[160px] opacity-30 animate-pulse"></div>
 
-      {/* 🟢 Content section */}
+      {/* Content */}
       <div className="relative z-10">
         <h1 className="text-3xl md:text-5xl font-bold text-center">Projects</h1>
-        <p className="text-center mt-2 max-w-xl mx-auto">
+        <p className="text-center mt-2 max-w-xl mx-auto px-2">
           Explore some of the projects I’ve built using modern tech stacks like
           React and Node.js.
         </p>
@@ -102,17 +102,19 @@ const Project = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`flex flex-col md:flex-row ${
-                index % 2 === 1 ? "md:flex-row-reverse" : ""
+              className={`flex flex-col ${
+                index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
               } items-center justify-between gap-10`}
             >
-              {/* Text Section */}
-              <div className="md:w-1/2">
+              {/* Text */}
+              <div className="w-full md:w-1/2 px-2">
                 <h2 className="text-2xl md:text-3xl font-bold">
                   {project.title}
                 </h2>
                 <div className="h-1 bg-gradient-to-r from-blue-500 to-cyan-500 my-2 rounded" />
-                <p className="mt-2">{project.description}</p>
+                <p className="mt-2 text-sm sm:text-base">
+                  {project.description}
+                </p>
                 <ul className="mt-4 list-disc pl-5 space-y-1 text-gray-400 text-sm">
                   {project.bullets.map((point, i) => (
                     <li key={i} dangerouslySetInnerHTML={{ __html: point }} />
@@ -130,21 +132,21 @@ const Project = () => {
                   ))}
                 </div>
 
-                <div className="flex gap-3">
+                <div className="flex gap-3 mt-4 flex-wrap">
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block mt-4 px-5 py-2 bg-[#465697] text-white rounded hover:bg-[#3456de] transition"
+                    className="px-4 py-2 bg-[#465697] text-white rounded hover:bg-[#3456de] transition"
                   >
-                    Github ↗
+                    GitHub ↗
                   </a>
                   {project.live && (
                     <a
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block mt-4 px-5 py-2 bg-[#465697] text-white rounded hover:bg-[#3456de] transition"
+                      className="px-4 py-2 bg-[#465697] text-white rounded hover:bg-[#3456de] transition"
                     >
                       Demo ↗
                     </a>
@@ -152,12 +154,12 @@ const Project = () => {
                 </div>
               </div>
 
-              {/* Image Section */}
-              <div className="hidden lg:block mx-56 w-[600px]">
+              {/* Image */}
+              <div className="w-full md:w-1/2">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="rounded-xl shadow-lg border border-gray-200"
+                  className="rounded-xl w-full object-cover border border-gray-200 shadow-lg"
                 />
               </div>
             </div>
