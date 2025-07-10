@@ -19,7 +19,7 @@ const projects = [
   {
     title: "Tic Tac Toe Game",
     link: "https://github.com/Riyamaurya123/tic-tac-toe.git",
-    live: "https://dashing-hamster-7bbbbe.netlify.app/",
+    live: "https://joyful-longma-392f06.netlify.app/",
     description:
       "A classic Tic Tac Toe game built using HTML, CSS, and JavaScript. Features interactive gameplay, turn-based logic, win detection, and responsive UI for both desktop and mobile devices.",
     bullets: [
