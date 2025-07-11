@@ -6,7 +6,7 @@ const Home = () => {
     <div className="text-white flex flex-col md:flex-row w-full justify-between items-center md:items-start gap-10 px-6 py-10 md:px-20 md:py-20 animate-fade-in">
       {/* Left Section */}
       <div className="w-full md:w-2/4 md:pt-10 text-center md:text-left">
-        <h1 className="text-3xl md:text-6xl font-bold leading-normal tracking-tighter flex justify-center md:justify-start gap-3">
+        <h1 className="text-3xl md:text-5xl font-bold leading-normal tracking-tighter flex justify-center md:justify-start gap-3">
           Hi, <TextChanger />
         </h1>
         <p className="text-sm md:text-2xl tracking-tight mt-4 md:mt-2">
