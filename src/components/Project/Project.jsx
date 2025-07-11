@@ -4,7 +4,7 @@ const projects = [
   {
     title: "Investment Website",
     link: "https://github.com/Riyamaurya123/invest.git",
-    live: "https://spectacular-crepe-314e1f.netlify.app/",
+    live: "https://adorable-torrone-ae5079.netlify.app/",
     description:
       "A static investment website built using HTML, CSS, and JavaScript with an intuitive and responsive user interface that showcases investment plans, calculators, and user-friendly design.",
     bullets: [
@@ -76,7 +76,6 @@ const projects = [
       "**Full-Stack Functionality:** Integrated RESTful APIs using Express and Node.js to handle blog CRUD operations with MongoDB as the database.",
       "**Authentication & Authorization:** Implemented user registration and login with JWT-based authentication and protected routes.",
       "**Responsive UI:** Styled using Tailwind CSS for a modern, mobile-first user experience across devices.",
-      "**Rich Text Editing:** Integrated a rich text editor for creating formatted blog content.",
       "**User Dashboard:** Users can view their posts, edit or delete them, and manage their profile from a clean dashboard interface.",
     ],
     tags: ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
@@ -88,7 +87,6 @@ const Project = () => {
   return (
     <div id="Project" className="relative p-6 sm:p-10 md:p-24 text-white">
       {/* Background Gradient */}
-      <div className="absolute z-0 top-40 left-[60%] w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full blur-[160px] opacity-30 animate-pulse"></div>
 
       {/* Content */}
       <div className="relative z-10">
@@ -155,11 +153,21 @@ const Project = () => {
               </div>
 
               {/* Image */}
-              <div className="w-full md:w-1/2">
+              <div className="w-full md:w-1/2 relative z-10 overflow-visible">
+                {/* Gradient Glow Behind Image */}
+                <div
+                  className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+                  w-[400px] sm:w-[500px] md:w-[600px] 
+                  h-[400px] sm:h-[500px] md:h-[600px] 
+                  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 
+                  rounded-full blur-[160px] opacity-30 animate-pulse pointer-events-none"
+                ></div>
+
+                {/* Foreground Image */}
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="rounded-xl w-full object-cover border border-gray-200 shadow-lg"
+                  className="relative z-10 rounded-xl w-full object-cover border border-gray-200 shadow-lg"
                 />
               </div>
             </div>

@@ -98,7 +98,7 @@ const Experience = () => {
       className="p-6 sm:p-10 md:p-16 lg:p-24 text-white bg-[#0d0d0d]"
     >
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6">
-        Experience
+        My Tech Stack
       </h1>
 
       <p className="text-center text-gray-400 max-w-2xl mx-auto text-sm sm:text-base md:text-lg">
@@ -132,7 +132,7 @@ const Experience = () => {
       {/* Internship Section */}
       <div className="mt-20">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10">
-          Internships
+          Experiences
         </h2>
 
         <div className="space-y-6">
