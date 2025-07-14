@@ -32,8 +32,23 @@ const projects = [
     image: "/images/tictactoe.png",
   },
   {
+    title: "Gym Website",
+    link: "https://github.com/Riyamaurya123/Gym-website.git",
+    live: "https://gym-website-frontend-three.vercel.app",
+    description:
+      "A modern, full-stack gym management platform built using the MERN stack. Designed for fitness enthusiasts to track progress, calculate BMI, explore workout plans, and connect with gym trainers. Includes automated email support via NodeMailer.",
+    bullets: [
+      "**BMI Calculator:** Integrated real-time BMI calculator to help users track fitness goals.",
+      "**Workout Plans:** Users can view personalized fitness programs and health tips.",
+      "**Email Notifications:** Implemented NodeMailer to send welcome emails and contact form responses.",
+    ],
+    tags: ["MongoDB", "Express.js", "React.js", "Node.js", "CSS", "NodeMailer"],
+    image: "/images/invest3.png",
+  },
+  {
     title: "Job Portal Website",
-    link: "https://github.com/Riyamaurya123/Job-Portal.git",
+    link: "https://github.com/Riyamaurya123/jobPortal.git",
+    live: "https://job-portal-frontend-two-delta.vercel.app",
     description:
       "A full-stack job portal platform built with the MERN stack, designed to connect job seekers (students) with recruiters. It features role-based dashboards, job application workflows, and an intuitive admin panel for managing platform data.",
     bullets: [
@@ -54,19 +69,7 @@ const projects = [
     ],
     image: "/images/invest2.png",
   },
-  {
-    title: "Gym Website",
-    link: "https://github.com/Riyamaurya123/Gym-website.git",
-    description:
-      "A modern, full-stack gym management platform built using the MERN stack. Designed for fitness enthusiasts to track progress, calculate BMI, explore workout plans, and connect with gym trainers. Includes automated email support via NodeMailer.",
-    bullets: [
-      "**BMI Calculator:** Integrated real-time BMI calculator to help users track fitness goals.",
-      "**Workout Plans:** Users can view personalized fitness programs and health tips.",
-      "**Email Notifications:** Implemented NodeMailer to send welcome emails and contact form responses.",
-    ],
-    tags: ["MongoDB", "Express.js", "React.js", "Node.js", "CSS", "NodeMailer"],
-    image: "/images/invest3.png",
-  },
+
   {
     title: "Blog App",
     link: "https://github.com/Riyamaurya123/Blog-App.git",
