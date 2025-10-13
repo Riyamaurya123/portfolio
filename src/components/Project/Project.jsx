@@ -1,6 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 
 const projects = [
+  {
+    title: "Doctor Appointment Website",
+    link: "https://github.com/Riyamaurya123/DoctorAppointment.git",
+    description:
+      "A full-stack Doctor Appointment Management System built with the MERN stack. It allows patients to book appointments, doctors to manage schedules, and admins to oversee platform operations — all with a secure, user-friendly interface.",
+    bullets: [
+      "**Authentication & Authorization:** Secure login/signup using JWT tokens with role-based access for Admins, Doctors, and Patients.",
+      "**Patient Dashboard:** Patients can browse doctors by specialization, book or cancel appointments, and track their medical history.",
+      "**Doctor Dashboard:** Doctors can manage their schedules, view patient appointments, and update availability in real time.",
+      "**Admin Panel:** Admins can manage doctors, users, and appointments with full CRUD operations and analytics dashboards.",
+      "**Appointment Booking System:** Real-time appointment booking with automatic slot management and email confirmations.",
+    ],
+    tags: [
+      "MongoDB",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "Tailwind CSS",
+      "JWT",
+      "Framer Motion",
+    ],
+    image: "/images/doctors.png",
+  },
+
   {
     title: "Investment Website",
     link: "https://github.com/Riyamaurya123/invest.git",
@@ -67,7 +91,7 @@ const projects = [
       "JWT",
       "Framer Motion",
     ],
-    image: "/images/invest2.png",
+    image: "/images/job.png",
   },
 
   {
@@ -87,96 +111,115 @@ const projects = [
 ];
 
 const Project = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  const displayedProjects = showAll ? projects : projects.slice(0, 3);
+
   return (
     <div id="Project" className="relative p-6 sm:p-10 md:p-24 text-white">
-      {/* Background Gradient */}
-
-      {/* Content */}
-      <div className="relative z-10">
-        <h1 className="text-3xl md:text-5xl font-bold text-center">Projects</h1>
-        <p className="text-center mt-2 max-w-xl mx-auto px-2">
+      <div className="relative z-10 text-center mb-12">
+        <h1 className="text-3xl md:text-5xl font-bold">Projects</h1>
+        <p className="mt-2 max-w-xl mx-auto px-2">
           Explore some of the projects I’ve built using modern tech stacks like
           React and Node.js.
         </p>
+      </div>
 
-        <div className="mt-16 space-y-20">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className={`flex flex-col ${
-                index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
-              } items-center justify-between gap-10`}
-            >
-              {/* Text */}
-              <div className="w-full md:w-1/2 px-2">
-                <h2 className="text-2xl md:text-3xl font-bold">
-                  {project.title}
-                </h2>
-                <div className="h-1 bg-gradient-to-r from-blue-500 to-cyan-500 my-2 rounded" />
-                <p className="mt-2 text-sm sm:text-base">
-                  {project.description}
-                </p>
-                <ul className="mt-4 list-disc pl-5 space-y-1 text-gray-400 text-sm">
-                  {project.bullets.map((point, i) => (
-                    <li key={i} dangerouslySetInnerHTML={{ __html: point }} />
-                  ))}
-                </ul>
+      <div className="space-y-20">
+        {displayedProjects.map((project, index) => (
+          <div
+            key={index}
+            className={`flex flex-col ${
+              index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
+            } items-center justify-between gap-10`}
+          >
+            {/* Text */}
+            <div className="w-full md:w-1/2 px-2">
+              <h2 className="text-2xl md:text-3xl font-bold">
+                {project.title}
+              </h2>
+              <div className="h-1 bg-gradient-to-r from-blue-500 to-cyan-500 my-2 rounded" />
+              <p className="mt-2 text-sm sm:text-base">{project.description}</p>
 
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {project.tags.map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className="bg-gradient-to-r from-blue-500 to-cyan-500 text-sm px-3 py-1 rounded"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              <ul className="mt-4 list-disc pl-5 space-y-1 text-gray-400 text-sm">
+                {project.bullets.map((point, i) => (
+                  <li key={i} dangerouslySetInnerHTML={{ __html: point }} />
+                ))}
+              </ul>
 
-                <div className="flex gap-3 mt-4 flex-wrap">
+              <div className="mt-4 flex flex-wrap gap-2">
+                {project.tags.map((tag, idx) => (
+                  <span
+                    key={idx}
+                    className="bg-gradient-to-r from-blue-500 to-cyan-500 text-sm px-3 py-1 rounded"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex gap-3 mt-4 flex-wrap">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-[#465697] text-white rounded hover:bg-[#3456de] transition"
+                >
+                  GitHub ↗
+                </a>
+                {project.live && (
                   <a
-                    href={project.link}
+                    href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-4 py-2 bg-[#465697] text-white rounded hover:bg-[#3456de] transition"
                   >
-                    GitHub ↗
+                    Demo ↗
                   </a>
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 py-2 bg-[#465697] text-white rounded hover:bg-[#3456de] transition"
-                    >
-                      Demo ↗
-                    </a>
-                  )}
-                </div>
+                )}
               </div>
+            </div>
 
-              {/* Image */}
-              <div className="w-full md:w-1/2 relative z-10 overflow-visible">
-                {/* Gradient Glow Behind Image */}
-                <div
-                  className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+            {/* Image */}
+            <div className="w-full md:w-1/2 relative z-10 overflow-visible">
+              <div
+                className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
                   w-[400px] sm:w-[500px] md:w-[600px] 
                   h-[400px] sm:h-[500px] md:h-[600px] 
                   bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 
                   rounded-full blur-[160px] opacity-30 animate-pulse pointer-events-none"
-                ></div>
+              ></div>
 
-                {/* Foreground Image */}
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="relative z-10 rounded-xl w-full object-cover border border-gray-200 shadow-lg"
-                />
-              </div>
+              <img
+                src={project.image}
+                alt={project.title}
+                className="relative z-10 rounded-xl w-[520px] object-cover border border-gray-200 shadow-lg"
+              />
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
+
+      {/* Show More Button */}
+      {!showAll ? (
+        <div className="text-center mt-10">
+          <button
+            onClick={() => setShowAll(true)}
+            className="px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-cyan-500 hover:to-blue-500 transition"
+          >
+            Show More
+          </button>
+        </div>
+      ) : (
+        <div className="text-center mt-10">
+          <button
+            onClick={() => setShowAll(false)}
+            className="px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-cyan-500 hover:to-blue-500 transition"
+          >
+            Show less
+          </button>
+        </div>
+      )}
     </div>
   );
 };

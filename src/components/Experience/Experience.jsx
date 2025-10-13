@@ -9,62 +9,52 @@ import {
   SiMantine,
   SiShadcnui,
 } from "react-icons/si";
+import Marquee from "react-fast-marquee";
 
 const skills = [
   {
     icon: <IoLogoHtml5 color="#E34F26" size={60} />,
     label: "HTML5",
-    desc: "Semantic HTML, SEO, and accessibility best practices.",
   },
   {
     icon: <IoLogoCss3 color="#1572b6" size={60} />,
     label: "CSS3",
-    desc: "Responsive layouts, Flexbox, Grid, and animations.",
   },
   {
     icon: <IoLogoJavascript color="#F7DF1E" size={60} />,
     label: "JavaScript",
-    desc: "ES6+, async programming, and clean DOM scripting.",
   },
   {
     icon: <FaReact color="#61DAFB" size={60} />,
     label: "React.js",
-    desc: "Hooks, component-driven UIs, performance optimization.",
   },
   {
     icon: <SiNextdotjs color="white" size={60} />,
     label: "Next.js",
-    desc: "Routing, SSR/SSG, and full-stack app development.",
   },
   {
     icon: <SiMantine color="#339AF0" size={60} />,
     label: "Mantine",
-    desc: "Modern React UI library for forms, modals & themes.",
   },
   {
     icon: <SiShadcnui color="white" size={60} />,
     label: "Shadcn UI",
-    desc: "Beautiful and accessible UI components built on Radix.",
   },
   {
     icon: <SiTailwindcss color="#38B2AC" size={60} />,
     label: "Tailwind CSS",
-    desc: "Rapid utility-first styling with mobile-first design.",
   },
   {
     icon: <SiMongodb color="#47A248" size={60} />,
     label: "MongoDB",
-    desc: "NoSQL database design, queries, and Mongoose.",
   },
   {
     icon: <FaNodeJs color="#68A063" size={60} />,
     label: "Node.js",
-    desc: "Server-side logic, APIs, and event-driven architecture.",
   },
   {
     icon: <SiExpress color="white" size={60} />,
     label: "Express.js",
-    desc: "Routing, middleware, and RESTful APIs.",
   },
 ];
 
@@ -122,9 +112,6 @@ const Experience = () => {
             <h3 className="mt-3 text-sm md:text-base font-semibold">
               {skill.label}
             </h3>
-            <p className="text-gray-400 text-xs md:text-sm mt-2">
-              {skill.desc}
-            </p>
           </div>
         ))}
       </div>
@@ -160,6 +147,23 @@ const Experience = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      {/*  Skill Marquee */}
+      <div className="mt-24">
+        <Marquee speed={60} gradient={false} pauseOnHover={true}>
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center justify-center bg-zinc-900 rounded-xl shadow-md mx-6 p-4 w-[140px] hover:scale-105 transition-transform duration-300"
+            >
+              {skill.icon}
+              <h3 className="mt-2 text-sm font-semibold text-white">
+                {skill.label}
+              </h3>
+            </div>
+          ))}
+        </Marquee>
       </div>
 
       {/* CTA */}
