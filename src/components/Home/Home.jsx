@@ -24,16 +24,16 @@ const Home = () => {
         </h1>
         <h2 className="text-3xl md:text-4xl font-bold mt-6 flex justify-start items-center gap-2">
           <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text ml-20 text-transparent">
-            Hi,
+            I am,
           </span>
           <span className="text-white">
             <TextChanger />
           </span>
         </h2>
         <p className="mt-4 md:mt-6 text-sm md:text-lg font-bold text-gray-300">
-          Hello! I’m a passionate web developer who loves crafting modern,
-          responsive, and interactive web experiences. I enjoy exploring new
-          technologies and building projects with clean code and smooth UI.
+          I’m a passionate web developer who loves crafting modern, responsive,
+          and interactive web experiences. I enjoy exploring new technologies
+          and building projects with clean code and smooth UI.
         </p>
         {/* Buttons */}
         <div className="mt-6 md:mt-10 flex justify-center gap-4">
