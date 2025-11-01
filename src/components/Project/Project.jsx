@@ -26,21 +26,6 @@ const projects = [
   },
 
   {
-    title: "Investment Website",
-    link: "https://github.com/Riyamaurya123/invest.git",
-    live: "https://adorable-torrone-ae5079.netlify.app/",
-    description:
-      "A static investment website built using HTML, CSS, and JavaScript with an intuitive and responsive user interface that showcases investment plans, calculators, and user-friendly design.",
-    bullets: [
-      "**Responsive Design:** Developed a fully responsive layout using HTML5 and modern CSS techniques (Flexbox, Grid).",
-      "**User Interface:** Designed interactive sections like investment plans, calculators, and FAQs using vanilla JavaScript.",
-      "**Clean Codebase:** Structured and semantic HTML for accessibility and SEO.",
-      "**Styling:** Used CSS animations and transitions to enhance user experience.",
-    ],
-    tags: ["HTML", "CSS", "JavaScript"],
-    image: "/images/invest1.png",
-  },
-  {
     title: "Tic Tac Toe Game",
     link: "https://github.com/Riyamaurya123/tic-tac-toe.git",
     live: "https://joyful-longma-392f06.netlify.app/",
@@ -72,7 +57,6 @@ const projects = [
   {
     title: "Job Portal Website",
     link: "https://github.com/Riyamaurya123/jobPortal.git",
-    live: "https://job-portal-frontend-two-delta.vercel.app",
     description:
       "A full-stack job portal platform built with the MERN stack, designed to connect job seekers (students) with recruiters. It features role-based dashboards, job application workflows, and an intuitive admin panel for managing platform data.",
     bullets: [
@@ -107,6 +91,27 @@ const projects = [
     ],
     tags: ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
     image: "/images/blog.png",
+  },
+  {
+    title: "Portfolio Website",
+    link: "https://github.com/Riyamaurya123/portfolio.git",
+    description:
+      "A modern and fully responsive personal portfolio website built using React, Tailwind CSS, and Framer Motion. It showcases projects, skills, and experiences with smooth animations and dynamic content rendering.",
+    bullets: [
+      "**Dynamic Project Rendering:** Projects are displayed dynamically using React props and reusable components.",
+      "**Smooth Animations:** Framer Motion brings elegant transitions and interactive animations for a polished user experience.",
+      "**Responsive Design:** Optimized layouts for all devices using Tailwind CSS utilities.",
+      "**Modern Tech Stack:** Built with React.js and Tailwind CSS for fast performance and maintainability.",
+    ],
+    tags: [
+      "React.js",
+      "Tailwind CSS",
+      "Framer Motion",
+      "JavaScript",
+      "Responsive Design",
+      "Portfolio",
+    ],
+    image: "/images/portfolio.png",
   },
 ];
 
