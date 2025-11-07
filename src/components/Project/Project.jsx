@@ -93,6 +93,26 @@ const projects = [
     image: "/images/blog.png",
   },
   {
+    title: "YouTube Clone",
+    link: "https://github.com/Riyamaurya123/YoutubeClone.git",
+    live: "https://youtube-clone-azure-seven-15.vercel.app/",
+    description:
+      "A fully responsive YouTube Clone built with React.js. This project replicates YouTube's core UI and functionality, featuring component-level styling for clean structure and efficient reusability. Users can search and filter videos dynamically using the integrated filter system.",
+    bullets: [
+      "**Component-Level Styling:** Each component has its own dedicated CSS file for better organization and maintainability.",
+      "**Dynamic Video Filtering:** Implemented search and category-based filters for a smoother user experience.",
+      "**Responsive UI:** Designed to adapt seamlessly across devices using modern CSS techniques.",
+    ],
+    tags: [
+      "React.js",
+      "CSS",
+      "Component-level Styling",
+      "Filter Functionality",
+    ],
+    image: "/images/youtube.png",
+  },
+
+  {
     title: "Portfolio Website",
     link: "https://github.com/Riyamaurya123/portfolio.git",
     description:
