@@ -60,6 +60,18 @@ const skills = [
 
 const internships = [
   {
+    company: "EncroDev Software",
+    role: "Frontend Developer",
+    duration: "Nov 2025 - Mar 2026",
+    description: [
+      "Developed responsive web applications using React.js and Next.js.",
+      "Built reusable UI components and optimized performance for better user experience.",
+      "Worked with REST APIs and handled dynamic data rendering in frontend.",
+      "Developed and customized websites using WordPress.",
+      "Collaborated with the team using Git for version control and project management.",
+    ],
+  },
+  {
     company: "DESIGNDOT TECHNOLOGIES PVT LTD",
     role: "Frontend Developer Intern",
     duration: "May 2025 - June 2025",
