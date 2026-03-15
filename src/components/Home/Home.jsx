@@ -19,11 +19,6 @@ const Home = () => {
 
       {/* Text Section */}
       <div className="text-center z-10 max-w-3xl">
-        {/* small badge */}
-        <span className="px-4 py-1 text-sm bg-white/10 backdrop-blur-md rounded-full border border-white/20">
-          Frontend Developer
-        </span>
-
         <h1 className="text-4xl md:text-6xl font-extrabold mt-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
           Hello, I’m Riya Maurya
         </h1>
