@@ -2,6 +2,51 @@ import React, { useState } from "react";
 
 const projects = [
   {
+    title: "The Shift Co",
+    live: "https://theshiftco.in/",
+    description:
+      "A modern full-stack women’s clothing eCommerce website built using Next.js and Tailwind CSS. Developed both frontend and backend with a seamless shopping experience, secure payments, and responsive UI for all devices.",
+    bullets: [
+      "**Full-Stack Development:** Designed and developed both frontend and backend architecture for complete website functionality.",
+      "**Modern UI/UX:** Built responsive and elegant interfaces using Next.js and Tailwind CSS for smooth user experience.",
+      "**Payment Integration:** Integrated Razorpay payment gateway for secure and seamless online transactions.",
+      "**Shipping Management:** Implemented Shiprocket integration for order processing and shipping management.",
+      "**eCommerce Features:** Added product listings, cart functionality, checkout flow, and order management system.",
+    ],
+    tags: [
+      "Next.js",
+      "Tailwind CSS",
+      "Razorpay",
+      "Shiprocket",
+      "Node.js",
+      "MongoDB",
+      "eCommerce",
+    ],
+    image: "/images/theshiftco.png",
+  },
+  {
+    title: "BossDent Global",
+    live: "https://bossdentglobal.com",
+    description:
+      "A modern dental equipment website developed using Next.js and Tailwind CSS. Built to showcase dental products with a clean UI, responsive design, and integrated communication features for customer inquiries.",
+    bullets: [
+      "**Modern Responsive UI:** Developed a clean and professional interface optimized for desktop, tablet, and mobile devices.",
+      "**Product Showcase:** Created structured product pages to display dental equipment with better user experience.",
+      "**Email Integration:** Integrated NodeMailer for contact forms and automated inquiry email notifications.",
+      "**Performance Optimization:** Implemented optimized components and responsive layouts using Next.js.",
+      "**Frontend Development:** Built scalable and maintainable UI using Next.js and Tailwind CSS.",
+    ],
+    tags: [
+      "Next.js",
+      "Tailwind CSS",
+      "NodeMailer",
+      "JavaScript",
+      "Responsive Design",
+      "Dental Website",
+    ],
+    image: "/images/bossdent.png",
+  },
+  {
     title: "Doctor Appointment Website",
     link: "https://github.com/Riyamaurya123/DoctorAppointment.git",
     description:
@@ -184,14 +229,16 @@ const Project = () => {
               </div>
 
               <div className="flex gap-3 mt-4 flex-wrap">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 bg-[#465697] text-white rounded hover:bg-[#3456de] transition"
-                >
-                  GitHub ↗
-                </a>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-[#465697] text-white rounded hover:bg-[#3456de] transition"
+                  >
+                    GitHub ↗
+                  </a>
+                )}{" "}
                 {project.live && (
                   <a
                     href={project.live}
